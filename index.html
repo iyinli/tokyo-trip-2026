@@ -655,12 +655,12 @@ const W=(t)=>`<span class='wishlist-tag'>${t}</span>`;
 const days=[
  {"id":"prep","date":"行前","wd":"准备","title":"行前准备清单","meta":"分为准备、必带、必做三大板块，勾选保存在本机。","prep":1},
  {"id":"wishlist","date":"待买","wd":"专页","title":"Wishlist · YL / NW","meta":"购物待买分两栏：左 YL、右 NW。日程事件另标 YL / NW / 推荐来源。链接与库存请出发前再核。","wishlist":1},
- {"id":"d24","date":"10/24","wd":"周六","title":"機場 · 抵达入住","meta":"YL & NW 共同日程。成田 T2 落地 → 上池袋 CLIFF COURT（入住 15:00 起）。区域按表：機場。","note":"京成线「特急」成田空港第2ビル → 日暮里，转 JR 山手线内回至池袋（示例约 20:13→21:42，约 ¥1,270）。再去上池袋。大行李建议 10/30 晚寄空港宅急便至羽田 T3（浅草改在 10/29，当晚寄件不合适）。本日各站均为两人共同。","ev":[
+ {"id":"d24","date":"10/24","wd":"周六","title":"機場 · 抵达入住","meta":"YL & NW 共同日程。成田 T2 落地 → 上池袋 CLIFF COURT（入住 15:00 起）。区域按表：機場。","note":"已乘京成线「特急」：成田空港第2ビル 20:13 → 日暮里 21:24，转 JR 山手线内回至池袋 21:42（约 ¥1,270）。再去上池袋。大行李建议 10/30 晚寄空港宅急便至羽田 T3（浅草改在 10/29，当晚寄件不合适）。本日各站均为两人共同。","ev":[
    ["19:45","成田机场 T2 落地","https://maps.google.com/?q=Narita+Airport+Terminal+2","UO650 抵达。办入境、取行李。记得给 Suica 充钱。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span><span class='wishlist-tag'>抵达</span>"],
-   ["约 20:13","成田空港第2ビル站 · 京成特急","https://maps.google.com/?q=Keisei+Narita+Airport+Terminal+2+Station","京成线「特急」（往京成上野）→ 日暮里，约 1h11（示例 20:13 开）。票价本段约 ¥1,052；可刷 Suica。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span><span class='wishlist-tag'>交通</span>"],
-   ["约 21:24","日暮里站换乘","https://maps.google.com/?q=Nippori+Station","京成到日暮里后，转 JR 山手线内回（池袋方向）。换乘约 5 分钟。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span><span class='wishlist-tag'>换乘</span>"],
-   ["约 21:29–21:42","JR 山手线 → 池袋","https://maps.google.com/?q=Ikebukuro+Station","山手线内回池袋方面，约 13 分钟 / 6 站。全程约 1h29、约 ¥1,270。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span><span class='wishlist-tag'>交通</span>"],
-   ["约 22:15","上池袋 CLIFF COURT","https://maps.google.com/?q=CLIFF+COURT+3-42-6+Kamiikebukuro+Toshima+Tokyo","池袋站后再去民宿入住（15:00 起可入）。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span><span class='wishlist-tag'>休整</span>"],
+   ["20:13","成田空港第2ビル站 · 京成特急（已上车）","https://maps.google.com/?q=Keisei+Narita+Airport+Terminal+2+Station","京成线「特急」（往京成上野）→ 日暮里，约 1h11。票价本段约 ¥1,052；可刷 Suica。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span><span class='wishlist-tag'>交通</span>"],
+   ["21:24","日暮里站换乘","https://maps.google.com/?q=Nippori+Station","转 JR 山手线内回（池袋方向）。换乘约 5 分钟。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span><span class='wishlist-tag'>换乘</span>"],
+   ["21:29–21:42","JR 山手线 → 池袋","https://maps.google.com/?q=Ikebukuro+Station","山手线内回池袋方面，约 13 分钟 / 6 站。全程约 1h29、约 ¥1,270。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span><span class='wishlist-tag'>交通</span>"],
+   ["22:15","上池袋 CLIFF COURT","https://maps.google.com/?q=CLIFF+COURT+3-42-6+Kamiikebukuro+Toshima+Tokyo","池袋站后再去民宿入住。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span><span class='wishlist-tag'>休整</span>"],
    ["23:00（可选）","【深夜】ドン・キホーテ 北池袋店","https://maps.google.com/?q=Don+Quijote+Kita-Ikebukuro+Ikebukurohoncho+2-7-5","池袋本町 2-7-5，24h。离民宿近。累了就便利店。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span><span class='wishlist-tag'>可选·深夜</span>"],
   ]},
  {"id":"d25","date":"10/25","wd":"周日","title":"銀座：中古→珠宝·Chanel·买手","meta":"表区域：銀座。一早排队 Tricolore 本店（8:00 开），再中古→珠宝·Chanel·买手。周日中央通步行者天国约 12:00–17:00（雨天取消）。","note":"【路线】早 Tricolore 排队（约 7:50 到店）→ 中古三店 → Mikimoto → Chanel → Loft/MUJI → Parlour/sheseldo → DSM/GSIX。On 银座 / Rope picnic / 买酒改到 10/31 银座补。来源：紫 YL=地图，青 NW=vivian 表，灰 推荐=助手补。","ev":[
