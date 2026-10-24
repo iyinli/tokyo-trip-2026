@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>东京行程 10.24–11.1 · v13</title>
+<title>东京行程 10.24–11.1 · v10</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
@@ -279,8 +279,8 @@ h1 {
 /* NW 想去标签（青蓝，对应 NW 栏） */
 .nw-tag {
   display: inline-block;
-  background: #0E7490;
-  color: #FFF;
+  background: #BAE6FD;
+  color: #0369A1;
   font-size: 11px;
   padding: 1px 7px;
   border-radius: 3px;
@@ -358,7 +358,7 @@ h1 {
   letter-spacing: .04em;
 }
 .wl-who.yl { background: #7C3AED; }
-.wl-who.nw { background: #0E7490; }
+.wl-who.nw { background: #BAE6FD; color: #0369A1; }
 .wl-brand {
   margin: 12px 0 8px;
   font-size: 13px;
@@ -637,8 +637,8 @@ input[type="checkbox"] {
 </head>
 <body>
 <div class="wrap">
-  <div class="kicker">BY6LRT · v13 · 按新表：表参道涩谷六本木 / 中目黑代官山惠比寿 / … / 浅草末日；来源标 YL / NW / 推荐</div>
-  <h1>东京行程 10.24–11.1 · YL & NW · v13</h1>
+  <div class="kicker">BY6LRT · v10 · 按表区域重排；来源标 YL / NW / 推荐</div>
+  <h1>东京行程 10.24–11.1 · YL & NW · v10</h1>
   <div class="hotel-badge">
     <span>🏠 住宿基点：〒170-0012 Tokyo, Toshima City, Kamiikebukuro, 3-chōme−42−6 クリフコート (CLIFF COURT)</span>
   </div>
@@ -655,70 +655,32 @@ const W=(t)=>`<span class='wishlist-tag'>${t}</span>`;
 const days=[
  {"id":"prep","date":"行前","wd":"准备","title":"行前准备清单","meta":"分为准备、必带、必做三大板块，勾选保存在本机。","prep":1},
  {"id":"wishlist","date":"待买","wd":"专页","title":"Wishlist · YL / NW","meta":"购物待买分两栏：左 YL、右 NW。日程事件另标 YL / NW / 推荐来源。链接与库存请出发前再核。","wishlist":1},
- {"id":"d24","date":"10/24","wd":"周六","title":"機場 · 抵达入住","meta":"成田 T2 落地 → 上池袋 CLIFF COURT（入住 15:00 起）。表该日空白 · 排機場抵达。","note":"Access Express → 日暮里 → JR 山手线池袋 → 东武东上线北池袋 → 步行至 Cliff Court（约 90–100 分钟 / 约 ¥1,400）。10/24 东京预报雨量偏大（约 20–35 mm、气温约 15–18°C），落地到步行段备伞/防水外套。大行李建议 10/31 晚寄空港宅急便至羽田 T3（浅草在 11/1）。","ev":[
-   ["19:45","成田机场 T2 落地","https://maps.google.com/?q=Narita+Airport+Terminal+2","UO650 抵达。办入境、取行李。先买 Suica（若未绑 Apple Wallet）。","<span class='yl-tag'>YL</span><span class='wishlist-tag'>抵达</span>"],
-   ["21:00","成田机场站 · Access Express","https://maps.google.com/?q=Narita+Airport+Station","搭乘京成 Access Express 至日暮里（约 ¥1,240），转 JR 山手线至池袋，再东武东上线一站到北池袋，步行至 Cliff Court。全程约 90–100 分钟、合计约 ¥1,400。","<span class='yl-tag'>YL</span><span class='wishlist-tag'>交通</span>"],
-   ["22:30","上池袋 CLIFF COURT","https://maps.google.com/?q=CLIFF+COURT+3-42-6+Kamiikebukuro+Toshima+Tokyo","办理入住（15:00 起可入）。找好附近黑猫/便利店寄件点——大行李建议 10/31 晚寄出（浅草日排 11/1）。","<span class='yl-tag'>YL</span><span class='wishlist-tag'>休整</span>"],
-   ["23:00（可选）","【深夜】ドン・キホーテ 北池袋店","https://maps.google.com/?q=Don+Quijote+Kita-Ikebukuro+Ikebukurohoncho+2-7-5","池袋本町 2-7-5，24h。离民宿近。累了就便利店。","<span class='yl-tag'>YL</span><span class='wishlist-tag'>可选·深夜</span>"],
+ {"id":"d24","date":"10/24","wd":"周六","title":"機場 · 抵达入住","meta":"YL & NW 共同日程。成田 T2 落地 → 上池袋 CLIFF COURT（入住 15:00 起）。区域按表：機場。","note":"京成 Skyliner → 日暮里 → JR 至池袋/板桥 → 上池袋。大行李建议 10/30 晚寄空港宅急便至羽田 T3（浅草改在 10/29，当晚寄件不合适）。本日各站均为两人共同。","ev":[
+   ["19:45","成田机场 T2 落地","https://maps.google.com/?q=Narita+Airport+Terminal+2","UO650 抵达。办入境、取行李。记得给 Suica 充钱。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span><span class='wishlist-tag'>抵达</span>"],
+   ["21:00","成田机场站","https://maps.google.com/?q=Narita+Airport+Station","搭乘 Skyliner 至日暮里，转 JR 山手线/埼京线至池袋/板桥。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span><span class='wishlist-tag'>交通</span>"],
+   ["22:30","上池袋 CLIFF COURT","https://maps.google.com/?q=CLIFF+COURT+3-42-6+Kamiikebukuro+Toshima+Tokyo","办理入住（15:00 起可入）。找好附近黑猫/便利店寄件点——大行李改建议 10/30 晚寄出（浅草日已排 10/29）。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span><span class='wishlist-tag'>休整</span>"],
+   ["23:00（可选）","【深夜】ドン・キホーテ 北池袋店","https://maps.google.com/?q=Don+Quijote+Kita-Ikebukuro+Ikebukurohoncho+2-7-5","池袋本町 2-7-5，24h。离民宿近。累了就便利店。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span><span class='wishlist-tag'>可选·深夜</span>"],
   ]},
- {"id":"d25","date":"10/25","wd":"周日","title":"表参道+涩谷+六本木+港区","meta":"表区域：表參道+澀谷+六本木+港區。一日极密——保住高价值点，其余标可选跳过。","note":"上午表参道（neel→中古Chanel→卡邦尼→B&O/On）→ 涩谷 PARCO/Loft → 傍晚六本木 The Row+Le Labo。10/25 仍可能有零星雨，户外段带伞；雨大就优先室内（PARCO/Loft/六本木商场）并多跳可选点。RAGTAG/agete/KOMEHYO/麻布/中城均可跳。中目黑/代官山改明日。","ev":[
-   ["09:20–09:45","池袋 → 表参道/明治神宫前","https://maps.google.com/?q=Omotesando+Station","副都心线约 15–20 分钟。站内简餐。","<span class='wishlist-tag'>交通</span>"],
-   ["09:50–10:25","【咖啡·YL】neel cafe 神宫前","https://maps.google.com/?q=neel+cafe+Jingumae","地图收藏 specialty 咖啡；时间紧可改便利店。","<span class='yl-tag'>YL</span>neel 神宫前"],
-   ["10:35–11:15","【二手】AMORE / VINTAGE QOO 表参道（择一）","https://maps.google.com/?q=AMORE+Vintage+Omotesando","古董 Chanel；两店挨着，只进一家即可。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>二手·可选跳过一家</span>"],
-   ["11:20–12:00","【午餐·NW】卡邦尼乌冬 神宫前","https://maps.google.com/?q=%E3%82%AB%E3%83%9C%E3%83%8B%E3%82%A6%E3%83%89%E3%83%B3+%E7%A5%9E%E5%AE%AE%E5%89%8D","神宫前乌冬。","<span class='nw-tag'>NW</span>卡邦尼乌冬"],
-   ["12:10–12:35","【一手】Bang & Olufsen 表参道ヒルズ 1F","https://maps.google.com/?q=Bang+Olufsen+Omotesando+Hills","试听；可与 On 二选一加速。","<span class='buy-tag'>待买</span><span class='nw-tag'>NW</span>B&O 表参道"],
-   ["12:40–13:05","【运动·NW】On 神宫前","https://maps.google.com/?q=On+Jingumae+5-17-27","神宫前 5-17-27。","<span class='nw-tag'>NW</span>On 神宫前"],
-   ["（可选）","【二手/珠宝】RAGTAG 原宿 / agete 表参道","https://maps.google.com/?q=RAGTAG+Harajuku+5-17-9+Jingumae","日程密建议跳；改新宿/银座日补。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>可选跳过</span>"],
-   ["13:20–14:10","→ 涩谷：PARCO / LOFT / RADIO EVA","https://maps.google.com/?q=RADIO+EVA+STORE+Shibuya+PARCO","银座线 1 站或步行。PARCO 5F RADIO EVA；另有 Loft。","<span class='yl-tag'>YL</span>涩谷 PARCO · RADIO EVA / Loft"],
-   ["（可选）","【二手】KOMEHYO / KINDAL 涩谷","https://maps.google.com/?q=KOMEHYO+SHIBUYA+Udagawacho+16-9","时间不够直接去六本木。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>可选跳过</span>"],
-   ["14:30–15:00","涩谷 → 六本木","https://maps.google.com/?q=Roppongi+Station","日比谷线约 10–15 分钟。","<span class='wishlist-tag'>交通</span>"],
-   ["15:05–15:50","【一手】THE ROW 六本木之丘","https://maps.google.com/?q=The+Row+Roppongi+Hills+West+Walk","West Walk 2F。Park Tote / 90s。【今日高价值】","<span class='buy-tag'>待买</span><span class='yl-tag'>YL</span>The Row 六本木"],
-   ["15:55–16:30","【香氛】Le Labo 六本木ヒルズ","https://maps.google.com/?q=Le+Labo+Roppongi+Hills","之丘内，与 The Row 同区。【今日高价值】","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span>Le Labo"],
-   ["（可选）","【买手】ESTNATION / 毛利庭园 / 麻布中古 / 中城","https://maps.google.com/?q=ESTNATION+Roppongi+Hills","日程密默认跳过；有余力再进 ESTNATION。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>可选跳过</span>"],
-   ["17:00–18:00","回池袋 · 西口晚餐自选","https://maps.google.com/?q=Ikebukuro+West+Exit","今日已很满，早回休整。","<span class='wishlist-tag'>回程</span>"],
-  ]},
- {"id":"d26","date":"10/26","wd":"周一","title":"中目黑+代官山+惠比寿","meta":"表区域：中目黑+代官山+惠比寿。轻松逛街日，承接昨日未排南区。","note":"目黑川散步 → Buly / ivy place（NW）→ LEMAIRE 惠比寿 → 站前晚饭自选。","ev":[
-   ["09:30–10:10","池袋 → 中目黑","https://maps.google.com/?q=Nakameguro+Station","副都心线→东横/日比谷，约 25–30 分钟。站内简餐。","<span class='wishlist-tag'>交通</span>"],
-   ["10:15–11:30","中目黑 · 目黑川散步","https://maps.google.com/?q=Meguro+River+Nakameguro","河边散步拍照；咖啡自选。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>中目黑</span>"],
-   ["11:40–12:40","中目黑/附近午餐（自选）","https://maps.google.com/?q=Nakameguro","站前自选；不排推荐甜品链。","<span class='wishlist-tag'>午餐</span>"],
-   ["13:00–13:50","【香氛·NW】Buly 代官山","https://maps.google.com/?q=Officine+Universelle+Buly+Daikanyama","代官山；步行或一站可到。","<span class='nw-tag'>NW</span>Buly"],
-   ["（备选）","【早午餐·NW】ivy place 代官山","https://maps.google.com/?q=ivy+place+Daikanyama","可当咖啡/早午餐。","<span class='nw-tag'>NW</span>ivy place"],
-   ["14:10–15:00","【一手】LEMAIRE 惠比寿旗舰","https://maps.google.com/?q=LEMAIRE+Tokyo+Ebisu+3-21-1","惠比寿；累了可改 10/28 伊势丹看 LEMAIRE。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>Wishlist</span>"],
-   ["15:15–16:30","惠比寿/代官山随逛（自选）","https://maps.google.com/?q=Ebisu+Station","轻逛；傍晚回池袋。","<span class='wishlist-tag'>轻松</span>"],
-   ["18:30–20:00","回池袋 · 晚餐自选","https://maps.google.com/?q=Ikebukuro+West+Exit","民宿附近即可。","<span class='wishlist-tag'>回程</span>"],
-  ]},
- {"id":"d27","date":"10/27","wd":"周二","title":"銀座：中古→珠宝·Chanel·买手","meta":"表区域：銀座。一天集中银座主线。","note":"【路线】中古三店 → Mikimoto → Chanel → Loft/MUJI → Parlour/sheseldo → DSM/GSIX。On / Rope / Imadeya·松屋可顺路补。","ev":[
-   ["09:00–09:30","池袋站 → 银座站","https://maps.google.com/?q=Ginza+Station","丸之内线直达约 20 分钟。早餐在民宿/站内解决（不排推荐喫茶）。","<span class='wishlist-tag'>交通</span>"],
-   ["09:35–10:00","银座四丁目 · 和光钟楼","https://maps.google.com/?q=Wako+Ginza+4-chome","店未开，中央通散步拍照。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>散步</span>"],
+ {"id":"d25","date":"10/25","wd":"周日","title":"銀座：中古→珠宝·Chanel·买手","meta":"表区域：銀座。一早排队 Tricolore 本店（8:00 开），再中古→珠宝·Chanel·买手。周日中央通步行者天国约 12:00–17:00（雨天取消）。","note":"【路线】早 Tricolore 排队（约 7:50 到店）→ 中古三店 → Mikimoto → Chanel → Loft/MUJI → Parlour/sheseldo → DSM/GSIX。On 银座 / Rope picnic / 买酒改到 10/31 银座补。来源：紫 YL=地图，青 NW=vivian 表，灰 推荐=助手补。","ev":[
+   ["07:20–07:50","池袋站 → 银座站","https://maps.google.com/?q=Ginza+Station","丸之内线直达约 20 分钟。为赶 8:00 开门，建议 7:20 前出门。","<span class='wishlist-tag'>交通</span>"],
+   ["07:50–08:00","【排队】トリコロール 本店 门前","https://maps.app.goo.gl/vmnc3nB7qB2dyST86","银座 5-9-17，银座站步行约 5 分钟。8:00 开门；周日早常有人排队，目标开门前到。不接受预约。","<span class='yl-tag'>YL</span><span class='wishlist-tag'>排队</span>"],
+   ["08:00–09:20","【早餐】トリコロール 本店","https://maps.app.goo.gl/vmnc3nB7qB2dyST86","1936 年老牌喫茶。约 8:00–19:00（L.O. 约 18:30），周二定休（明天周日营业）。可点モーニング。吃完再往四丁目中古。","<span class='yl-tag'>YL</span><span class='wishlist-tag'>早餐</span>"],
+   ["09:30–10:40","银座四丁目 · 和光钟楼一带散步","https://maps.google.com/?q=Wako+Ginza+4-chome","中古 11:00 才开，中央通散步；周日 12:00 起可能步行者天国。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>散步</span>"],
    ["11:00–11:35","【二手】KOMEHYO GINZA","https://maps.google.com/?q=KOMEHYO+GINZA+2-7-18+Ginza","银座 2-7-18，11:00–20:00。中古包/珠宝先摸价。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>二手</span>"],
    ["11:40–12:10","【二手】大黑屋 银座店","https://maps.google.com/?q=Daikokuya+Ginza+2-2-17","银座 2-2-17，对比价。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>二手</span>"],
    ["12:20–12:55","【二手】BRAND OFF 银座本店","https://maps.google.com/?q=BRAND+OFF+Ginza+Main+Store+5-5-9","银座 5-5-9，3F Hermès 专层。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>二手</span>"],
-   ["13:00–13:40","【一手】MIKIMOTO 银座4丁目本店","https://maps.google.com/?q=MIKIMOTO+Ginza+Main+Store+4-5-5+Ginza","银座 4-5-5，约 11:00–19:00。珍珠。","<span class='buy-tag'>待买</span><span class='yl-tag'>YL</span>Mikimoto 珍珠"],
-   ["13:45–14:25","【一手】CHANEL 银座","https://maps.google.com/?q=CHANEL+Ginza+3-5-3+Ginza","银座 3-5-3。并木店备选 6-7-19。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span>Chanel 包袋/配饰"],
+   ["13:00–13:40","【一手】MIKIMOTO 银座4丁目本店","https://maps.google.com/?q=MIKIMOTO+Ginza+Main+Store+4-5-5+Ginza","银座 4-5-5，约 11:00–19:00。珍珠。","<span class='buy-tag'>待买</span><span class='yl-tag'>YL</span>Mikimoto 珍珠（YL）"],
+   ["13:45–14:25","【一手】CHANEL 银座","https://maps.google.com/?q=CHANEL+Ginza+3-5-3+Ginza","银座 3-5-3。周末可能取号。并木店备选 6-7-19。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span>Chanel 包袋/配饰"],
    ["14:30–15:05","【一手】银座 LOFT","https://maps.google.com/?q=Ginza+Loft+Marronnier+Gate+Ginza+2","文具/美妆/杂货。","<span class='buy-tag'>待买</span><span class='yl-tag'>YL</span>银座 Loft"],
    ["15:10–15:40","【一手】無印良品 银座","https://maps.google.com/?q=MUJI+Ginza+3-3-5","银座 3-3-5 旗舰，收纳/日用品。","<span class='buy-tag'>待买</span><span class='yl-tag'>YL</span>MUJI 银座"],
    ["15:50–16:40","【午餐】资生堂 PARLOUR Salon de Café","https://maps.google.com/?q=Shiseido+Parlour+Ginza+Salon+de+Cafe","银座 8-8-3。季节芭菲。备选：寬烏冬 银座店（NW）。","<span class='yl-tag'>YL</span>资生堂 Parlour（地图） · 备选寬烏冬 <span class='nw-tag'>NW</span>"],
    ["（备选午餐）","【乌冬·NW】寬烏冬 银座店","https://maps.google.com/?q=%E5%AF%AC%E7%83%8F%E5%86%AC+%E9%8A%80%E5%BA%A7+3-14-13","银座 3-14-13。Parlour 人多时改这里。","<span class='nw-tag'>NW</span>寬烏冬（vivian 表）"],
    ["16:45–17:15","【美妆·NW】sheseldo 银座","https://maps.google.com/?q=sheseldo+Ginza+7-8-10","银座 7-8-10，Parlour 同区。","<span class='nw-tag'>NW</span>sheseldo"],
-   ["17:25–18:10","【买手】Dover Street Market Ginza（The Row / Dior）","https://maps.google.com/?q=Dover+Street+Market+Ginza+6-9-5","银座 6-9-5。The Row 看款；Dior 顺路。","<span class='buy-tag'>待买</span><span class='yl-tag'>YL</span>The Row Park Tote / 90s · Dior 顺路"],
-   ["18:15–18:45","【买手】GINZA SIX · PARIGOT（LEMAIRE 试背）","https://maps.google.com/?q=GINZA+SIX","4F PARIGOT 可看 LEMAIRE。同栋 B2 可顺路 Imadeya 买酒。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>买手</span>"],
-   ["（可选补）","【可选】On·Rope picnic（NW）/ Belty 银座店（YL）","https://maps.google.com/?q=GIANNI+CHIARINI+Ginza+5-6-13","On 4-3-1、Rope picnic インズ2；Belty 优先银座店（5-6-13，10/17 已重开，11:00–19:00），松屋 3F 备选。时间紧可跳。","<span class='yl-tag'>YL</span>Belty · <span class='nw-tag'>NW</span>On/Rope"],
-   ["（可选补）","【酒·YL】GINZA SIX B2 いまでや / 松屋 B1","https://maps.google.com/?q=GINZA+SIX+Imadeya+Ginza","清酒/威士忌；装箱前可先看，正式寄件在 10/31。","<span class='yl-tag'>YL</span>Imadeya / 松屋买酒"],
-   ["（标记）","【二次元】EVA 店铺（银座无常设）","https://www.evastore.jp/shop/pages/store.aspx","银座没有常设 EVANGELION / RADIO EVA。东京常设：池袋 PARCO 本馆 6F「EVANGELION STORE TOKYO-01」（优先排 10/29）；涩谷 PARCO 5F「RADIO EVA」（10/25 已过 PARCO 可补）。","<span class='yl-tag'>YL</span><span class='wishlist-tag'>标记·改日去正式店</span>"],
+   ["17:25–18:10","【买手】Dover Street Market Ginza（The Row / Dior）","https://maps.google.com/?q=Dover+Street+Market+Ginza+6-9-5","银座 6-9-5。The Row 看款；Dior 顺路。","<span class='buy-tag'>待买</span><span class='yl-tag'>YL</span>The Row Park Tote / 90s · <span class='nw-tag'>NW</span>Dior 顺路"],
+   ["18:15–18:45","【买手】GINZA SIX · PARIGOT（LEMAIRE 试背）","https://maps.google.com/?q=GINZA+SIX","4F PARIGOT 可看 LEMAIRE。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>买手</span>"],
    ["20:00–21:00","【夜间】ドン・キホーテ 銀座本館","https://maps.google.com/?q=Don+Quijote+Ginza+Honkan+Ginza+8-10","银座 8-10，24h。药妆零食。","<span class='yl-tag'>YL</span><span class='wishlist-tag'>ドンキ</span>"],
   ]},
- {"id":"d28","date":"10/28","wd":"周三","title":"新宿：伊势丹+牛舌午餐+中古","meta":"表区域：新宿。11:30 已订 Gyu Tongue Lemon（2 人）；伊势丹补买 + 中古；今晚不寄行李。","note":"午前伊势丹 → 11:30 牛たんの檸檬総本店（已订 2 人，定食约 60 分钟制，勿迟到）→ 下午中古。寄件留到 10/31 缓冲日。","ev":[
-   ["09:30–10:00","池袋 → 新宿","https://maps.google.com/?q=Shinjuku+Station","JR/副都心线约 10 分钟。轻简餐即可，留胃给 11:30 牛舌。","<span class='wishlist-tag'>交通</span>"],
-   ["10:00–11:15","【一手】伊势丹新宿（Belty / The Row / B&O / Chanel）","https://maps.google.com/?q=Isetan+Shinjuku","本馆 1F Belty、男士馆 3F The Row、本館 5F B&O、馆内 Chanel；亦可看 LEMAIRE。11:15 前离开赶午餐。","<span class='buy-tag'>待买</span><span class='yl-tag'>YL</span>伊势丹补买 The Row·Belty·B&O·Chanel"],
-   ["11:30–12:30","【已订·午餐】新宿焼肉 牛たんの檸檬 総本店","https://maps.google.com/?q=%E7%89%9B%E3%81%9F%E3%82%93%E3%81%AE%E6%AA%B8%E6%AA%AC+%E6%96%B0%E5%AE%BF+%E8%A5%BF%E6%96%B0%E5%AE%BF7-16-12","西新宿 7-16-12 YS ビル B1F。预订：周三 11:30 · 2 人。定食约 60 分钟；勿迟到超过 5 分钟。","<span class='yl-tag'>YL</span><span class='wishlist-tag'>已订·2人</span>"],
-   ["12:45–13:25","【二手】KOMEHYO SHINJUKU","https://maps.google.com/?q=KOMEHYO+SHINJUKU+3-19-4","新宿 3-19-4。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>二手</span>"],
-   ["14:00–14:40","【二手】RAGTAG 新宿","https://maps.google.com/?q=RAGTAG+Shinjuku+3-32-10","设计师二手。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>二手</span>"],
-   ["14:50–15:20","【100 円】Seria 新宿マルイアネックス","https://maps.google.com/?q=Seria+Shinjuku+Marui+Annex","百元小物。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>Seria</span>"],
-   ["15:25–16:05","【二手】BRAND OFF / 大黑屋 新宿（择一）","https://maps.google.com/?q=BRAND+OFF+Shinjuku","累了跳过。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>二手</span>"],
-   ["16:30–17:30","回池袋 · 西口/民宿方向","https://maps.google.com/?q=Ikebukuro+West+Exit","可避开东口人潮走西口。","<span class='wishlist-tag'>回程</span>"],
-   ["19:00–20:30","民宿附近晚餐（自选）","https://maps.google.com/?q=Kamiikebukuro","今晚不寄行李（留给 10/31）。","<span class='wishlist-tag'>晚餐</span>"],
-  ]},
- {"id":"d29","date":"10/29","wd":"周四","title":"池袋：Animate·中古·西武/东武","meta":"表区域：池袋。本地主场；万圣节周期间东口/池ハロ人潮渐起，晚上可留附近。","note":"Sunshine 二次元 → 西武 The Row / Loft → 东武 Belty → トリトン备选。寄件正式【必做】仍排 10/31。","ev":[
+ {"id":"d26","date":"10/26","wd":"周一","title":"池袋：Animate·中古·西武/东武","meta":"表区域：池袋。平日主场；避开 10/30–11/1 池袋万圣节人潮。","note":"Sunshine 二次元 → 西武 The Row / Loft → 东武 Belty → トリトン备选。已删推荐喫茶/COFFEE VALLEY 主线。","ev":[
    ["09:00–09:40","【吃饭·YL】新八食堂 Shinpachi Shokudo","https://maps.google.com/?q=Shinpachi+Shokudo+Ikebukuro","池袋地图收藏店。营业以现场为准；也可改站内简餐。","<span class='yl-tag'>YL</span>新八食堂（地图）"],
    ["（备选）","【吃饭·YL】Good Diner Inn Copain","https://maps.google.com/?q=Good+Diner+Inn+Copain","地图收藏。与新八二选一。","<span class='yl-tag'>YL</span>Copain（地图）"],
    ["10:00–11:20","【一手】Animate 池袋本店","https://maps.google.com/?q=Animate+Ikebukuro+Main+Store","Sunshine 方向，10:00–21:00。","<span class='yl-tag'>YL</span>Animate 周边"],
@@ -728,42 +690,91 @@ const days=[
    ["13:25–13:50","【100 円】Seria 池袋 P'PARCO","https://maps.google.com/?q=Seria+Ikebukuro+P%27PARCO","P'PARCO 5F。百元小物。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>Seria</span>"],
    ["14:00–14:40","【一手】THE ROW 西武池袋本店","https://maps.google.com/?q=Seibu+Ikebukuro+Main+Store","西武本馆。Park Tote / 90s。","<span class='buy-tag'>待买</span><span class='yl-tag'>YL</span>The Row 西武"],
    ["14:45–15:25","【一手】池袋 LOFT","https://maps.google.com/?q=Ikebukuro+Loft","西武内。","<span class='yl-tag'>YL</span>池袋 Loft"],
-   ["15:30–16:05","【一手】GIANNI CHIARINI 东武池袋","https://maps.google.com/?q=Tobu+Department+Store+Ikebukuro","东武 2F · Belty 先看款。同栋可晚餐 トリトン。","<span class='buy-tag'>待买</span><span class='yl-tag'>YL</span>Belty clutch"],
+   ["15:30–16:05","【一手】GIANNI CHIARINI 东武池袋","https://maps.google.com/?q=Tobu+Department+Store+Ikebukuro","东武 2F · Belty 先看款。同栋可晚餐 トリトン。","<span class='buy-tag'>待买</span><span class='yl-tag'>YL</span><span class='nw-tag'>NW</span>Belty clutch"],
    ["（晚餐备选）","【寿司·NW】回転寿司トリトン 东武池袋","https://maps.google.com/?q=%E5%9B%9E%E8%BB%A2%E5%AF%BF%E5%8F%B8%E3%83%88%E3%83%AA%E3%83%88%E3%83%B3+%E6%B1%A0%E8%A2%8B%E6%9D%B1%E6%AD%A6","东武百货内。","<span class='nw-tag'>NW</span>トリトン（vivian 表）"],
-   ["16:15–16:45","【一手】EVANGELION STORE TOKYO-01（池袋 PARCO 6F）","https://maps.google.com/?q=EVANGELION+STORE+TOKYO-01+Ikebukuro+PARCO","南池袋 1-28-2 池袋パルコ本館 6F，约 11:00–21:00。银座无常设店，正式店在此。顺路可看 WEGO/3COINS。留意东口人潮。","<span class='yl-tag'>YL</span>EVANGELION STORE 池袋"],
-   ["20:00–21:00","【夜间】MEGAドンキ 池袋東口駅前（或北池袋）","https://maps.google.com/?q=MEGA+Don+Quijote+Ikebukuro+East+Exit+Minami-Ikebukuro+1-22-5","万圣节周期间东口人多可改北池袋店；晚上留本地。","<span class='yl-tag'>YL</span>ドンキ"],
+   ["16:15–16:45","【一手】WEGO / 3COINS 等 Sunshine 一带","https://maps.google.com/?q=WEGO+Ikebukuro","地图有 WEGO、3COINS；顺路看 Evangelion/RADIO EVA 若开门。","<span class='yl-tag'>YL</span>WEGO·3COINS 等"],
+   ["20:00–21:00","【夜间】MEGAドンキ 池袋東口駅前","https://maps.google.com/?q=MEGA+Don+Quijote+Ikebukuro+East+Exit+Minami-Ikebukuro+1-22-5","东口步行约 1 分钟，24h。","<span class='yl-tag'>YL</span>ドンキ 东口"],
   ]},
- {"id":"d30","date":"10/30","wd":"周五","title":"上野：公园·阿美横丁","meta":"表区域：上野。全日上野公园、阿美横丁；合羽桥可选。寄件仍排明日缓冲日。","note":"上野公园 → 阿美横丁 → 可选合羽桥。傍晚回民宿装箱预备；【必做】寄件在 10/31。","ev":[
-   ["09:00–09:30","池袋/板桥 → 上野","https://maps.google.com/?q=Ueno+Station","JR 约 20–25 分钟。可优先板桥出发减换乘。","<span class='wishlist-tag'>交通</span>"],
-   ["09:40–11:40","上野公园 / 博物馆区散步","https://maps.google.com/?q=Ueno+Park","开放式逛公园；可进博物馆外立面拍照。简餐自选。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>上野</span>"],
-   ["11:50–13:20","【市集】阿美横丁","https://maps.google.com/?q=Ameya-Yokocho+Ueno","零食/干货/杂货；午餐自选。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>阿美横丁</span>"],
-   ["13:40–15:20","（可选）合羽桥道具街","https://maps.google.com/?q=Kappabashi+Dougu+Street","餐具/道具；部分店周末前营业看现场。去则压缩阿美横丁。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>合羽桥可选</span>"],
-   ["15:40–16:40","上野站前随逛 / 回程","https://maps.google.com/?q=Ueno+Station","轻松收尾；不排推荐喫茶主线。","<span class='wishlist-tag'>轻松</span>"],
-   ["17:30–19:00","回池袋 · 晚餐自选 · 预备装箱清单","https://maps.google.com/?q=CLIFF+COURT+3-42-6+Kamiikebukuro+Toshima+Tokyo","列好酒/重物；正式寄件明日晚。名牌包/珠宝随身。","<span class='wishlist-tag'>准备</span>"],
+ {"id":"d27","date":"10/27","wd":"周二","title":"六本木+港区：The Row·Le Labo·麻布","meta":"表区域：六本木+港區。白天逛完傍晚前回池袋。","note":"之丘 The Row（YL）+ Le Labo（YL+NW）→ 麻布中古（推荐）→ 中城。已去掉 Bricolage / 虎屋主线。","ev":[
+   ["09:30–10:00","池袋 → 六本木","https://maps.google.com/?q=Roppongi+Station","大江户线/南北线换乘，约 25–35 分钟。站内/便利店简餐。","<span class='wishlist-tag'>交通</span>"],
+   ["10:10–11:00","六本木之丘 毛利庭园散步","https://maps.google.com/?q=Mohri+Garden+Roppongi+Hills","店未开先散步拍照。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>散步</span>"],
+   ["11:00–11:40","【买手】ESTNATION 六本木之丘","https://maps.google.com/?q=ESTNATION+Roppongi+Hills","けやき坂 Complex。高端买手。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>买手</span>"],
+   ["11:45–12:25","【一手】THE ROW 六本木之丘","https://maps.google.com/?q=The+Row+Roppongi+Hills+West+Walk","West Walk 2F。Park Tote / 90s。","<span class='buy-tag'>待买</span><span class='yl-tag'>YL</span>The Row 六本木"],
+   ["12:30–13:05","【香氛】Le Labo 六本木ヒルズ","https://maps.google.com/?q=Le+Labo+Roppongi+Hills","之丘内，与 The Row 同区。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span>Le Labo"],
+   ["13:10–14:00","六本木之丘午餐（自选）","https://maps.google.com/?q=Roppongi+Hills","之丘内简餐；不指定推荐餐厅。","<span class='wishlist-tag'>午餐</span>"],
+   ["14:15–15:00","【二手】BRAND COLLECT 麻布十番","https://maps.google.com/?q=Brand+Collect+Azabu-Juban","麻布十番 2-14-4，步行约 10 分钟。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>二手</span>"],
+   ["15:20–16:10","东京中城随逛（含 POLÈNE 若有）","https://maps.google.com/?q=Tokyo+Midtown","地图有 POLÈNE；有则进，无则跳过。","<span class='yl-tag'>YL</span>中城 / POLÈNE 若开门"],
+   ["16:30–17:30","回池袋 · 西口晚餐自选","https://maps.google.com/?q=Ikebukuro+West+Exit","万圣节前夜前离开港区。晚饭自选，不排推荐甜品店。","<span class='wishlist-tag'>回程</span>"],
   ]},
- {"id":"d31","date":"10/31","wd":"周六","title":"缓冲日 · 寄行李（可选东京站）","meta":"表该日空白 · 近郊休整缓冲。勿塞满；【必做】当晚寄空港宅急便→羽田 T3。","note":"可轻排东京站/角色街可选；万圣节夜留民宿附近，不去涩谷/六本木。","ev":[
-   ["（可选上午）","【可选】东京站一番街 / Chiikawa Land","https://maps.google.com/?q=Tokyo+Character+Street+Tokyo+Station","丸之内线约 20 分钟；轻逛即可，不必久留。不想出门就民宿休息。","<span class='yl-tag'>YL</span><span class='wishlist-tag'>可选·勿塞满</span>"],
-   ["（可选）","东京拉面街 / 零食乐园（轻逛）","https://maps.google.com/?q=Tokyo+Ramen+Street+Tokyo+Station","若已在东京站，择一面；否则跳过。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>可选</span>"],
-   ["下午","近郊休整 / 民宿整理行李","https://maps.google.com/?q=CLIFF+COURT+3-42-6+Kamiikebukuro+Toshima+Tokyo","装箱、核对护照与宅急便地址。","<span class='wishlist-tag'>休整</span>"],
-   ["19:00–20:00","民宿附近晚餐（自选）","https://maps.google.com/?q=Kamiikebukuro","万圣节夜：不去涩谷、六本木；池袋东口 cosplay 也尽量避。","<span class='wishlist-tag'>提醒</span>"],
-   ["20:30–21:30","【必做】寄空港宅急便 → 羽田 T3","https://maps.google.com/?q=Yamato+Transport+Kamiikebukuro","民宿附近便利店/黑猫。收件「羽田空港第3旅客ターミナル」，搭乘日 11/1。保留ご依頼主控。","<span class='yl-tag'>YL</span><span class='wishlist-tag'>必做·寄行李</span>"],
+ {"id":"d28","date":"10/28","wd":"周三","title":"表参道+涩谷：中古·On·Buly","meta":"表区域：表參道+澀谷。合并原表参道与涩谷主线；傍晚可代官山/惠比寿。","note":"neel（YL）→ 古董 Chanel（推荐）→ 卡邦尼（NW）→ B&O/On/agete（NW）→ 涩谷 Parco/Loft（YL）→ Buly（NW）。已去掉パンとエスプレッソと / MAMEYA / SunnyHills / VIRON / FUGLEN / FLIPPER'S 主线。","ev":[
+   ["09:30–10:00","池袋 → 表参道/明治神宫前","https://maps.google.com/?q=Omotesando+Station","副都心线直达明治神宫前约 15–20 分钟。","<span class='wishlist-tag'>交通</span>"],
+   ["10:00–10:40","【咖啡·YL】neel cafe 神宫前","https://maps.google.com/?q=neel+cafe+Jingumae","地图收藏 specialty 咖啡。","<span class='yl-tag'>YL</span>neel 神宫前"],
+   ["11:00–11:40","【二手】AMORE Vintage 表参道","https://maps.google.com/?q=AMORE+Vintage+Omotesando","古董 Chanel。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>二手</span>"],
+   ["11:45–12:25","【二手】VINTAGE QOO TOKYO 表参道","https://maps.google.com/?q=VINTAGE+QOO+TOKYO+Omotesando","B1 古董 Chanel，可对比 AMORE。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>二手</span>"],
+   ["12:30–13:15","【午餐·NW】卡邦尼乌冬 神宫前","https://maps.google.com/?q=%E3%82%AB%E3%83%9C%E3%83%8B%E3%82%A6%E3%83%89%E3%83%B3+%E7%A5%9E%E5%AE%AE%E5%89%8D","神宫前乌冬。","<span class='nw-tag'>NW</span>卡邦尼乌冬"],
+   ["13:25–13:55","【一手】Bang & Olufsen 表参道ヒルズ 1F","https://maps.google.com/?q=Bang+Olufsen+Omotesando+Hills","试听耳机/音箱。","<span class='buy-tag'>待买</span><span class='nw-tag'>NW</span>B&O 表参道"],
+   ["14:00–14:30","【运动·NW】On 神宫前","https://maps.google.com/?q=On+Jingumae+5-17-27","神宫前 5-17-27。","<span class='nw-tag'>NW</span>On 神宫前"],
+   ["14:35–15:05","【二手】RAGTAG 原宿","https://maps.google.com/?q=RAGTAG+Harajuku+5-17-9+Jingumae","设计师二手。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>二手</span>"],
+   ["15:10–15:40","【一手】KIDDY LAND 原宿","https://maps.google.com/?q=Kiddy+Land+Harajuku+6-1-9+Jingumae","角色玩具/伴手礼。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>周边</span>"],
+   ["15:45–16:15","【珠宝·NW】agete 表参道","https://maps.google.com/?q=agete+%E8%A1%A8%E5%8F%82%E9%81%93+%E5%8D%97%E9%9D%92%E5%B1%B1+5-6-26","南青山 5-6-26。","<span class='nw-tag'>NW</span>agete"],
+   ["16:20–16:50","【买手】UNITED ARROWS / BEAMS 原宿（择一）","https://maps.google.com/?q=UNITED+ARROWS+Harajuku+Main+Store","平日约 12:00 开。时间紧可跳。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>买手</span>"],
+   ["17:00–17:40","→ 涩谷：PARCO / LOFT","https://maps.google.com/?q=Shibuya+PARCO","银座线 1 站或步行。地图有 Parco、Loft。","<span class='yl-tag'>YL</span>涩谷 PARCO / Loft"],
+   ["17:45–18:25","【二手】KOMEHYO / KINDAL 涩谷（择一）","https://maps.google.com/?q=KOMEHYO+SHIBUYA+Udagawacho+16-9","宇田川町中古，累了跳过。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>二手</span>"],
+   ["18:35–19:10","【香氛·NW】Buly 代官山","https://maps.google.com/?q=Officine+Universelle+Buly+Daikanyama","代官山。顺路可看 ivy place（NW 早餐/早午餐备选，今日作咖啡点心停一下也可）。","<span class='nw-tag'>NW</span>Buly · 备选 ivy place <span class='nw-tag'>NW</span>"],
+   ["（备选）","【早午餐·NW】ivy place 代官山","https://maps.google.com/?q=ivy+place+Daikanyama","若下午改走代官山线可当正餐。","<span class='nw-tag'>NW</span>ivy place"],
+   ["19:20–20:00","【一手】LEMAIRE 惠比寿旗舰（可选）","https://maps.google.com/?q=LEMAIRE+Tokyo+Ebisu+3-21-1","时间够再去；否则改 10/30 伊势丹看 LEMAIRE。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>Wishlist</span>"],
+   ["20:30–21:20","【夜间】MEGAドンキ 渋谷本店","https://maps.google.com/?q=MEGA+Don+Quijote+Shibuya+Honten+Udagawacho+28-6","万圣节周人多，天黑后尽快结束回池袋。","<span class='yl-tag'>YL</span>ドンキ 涩谷"],
+  ]},
+ {"id":"d29","date":"10/29","wd":"周四","title":"浅草：寺社·抹茶轻松日","meta":"表区域：淺草。轻量观光 + NW 抹茶；大行李改 10/30 晚寄。","note":"壽壽喜園 / 八十八良葉舍（NW）。已去掉梅园、FUGLEN ASAKUSA 等推荐甜品主线。寄件：明日（10/30）晚在民宿附近便利店/黑猫寄空港宅急便 → 羽田 T3，搭乘日 11/1。","ev":[
+   ["09:30–10:10","池袋 → 浅草","https://maps.google.com/?q=Asakusa+Station","副都心线→银座线/大江户线，约 30–40 分钟。","<span class='wishlist-tag'>交通</span>"],
+   ["10:15–11:00","浅草寺 · 仲见世","https://maps.google.com/?q=Senso-ji","轻逛拍照，避开硬塞购物。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>观光</span>"],
+   ["11:10–11:50","【抹茶·NW】壽壽喜園 浅草总店","https://maps.google.com/?q=%E5%A3%BD%E5%A3%BD%E5%96%9C%E5%9C%92+%E6%B5%85%E8%8D%89","浅草寺周边抹茶。","<span class='nw-tag'>NW</span>壽壽喜園"],
+   ["12:00–12:40","【抹茶·NW】八十八良葉舍（备选/顺路）","https://maps.google.com/?q=%E5%85%AB%E5%8D%81%E5%85%AB%E8%89%AF%E8%91%89%E8%88%8E+%E6%8A%B9%E8%8C%B6","与壽壽喜園二选一或顺路。","<span class='nw-tag'>NW</span>八十八良葉舍"],
+   ["12:50–13:40","浅草午餐（自选）","https://maps.google.com/?q=Asakusa","仲见世/西参道自选，不指定推荐店。","<span class='wishlist-tag'>午餐</span>"],
+   ["14:00–15:30","浅草慢逛 / 咖啡休息（自选）","https://maps.google.com/?q=Asakusa","轻松日；可回民宿早休。不排推荐甜品链。","<span class='wishlist-tag'>轻松</span>"],
+   ["16:30–17:30","回池袋 · 整理明日寄件清单","https://maps.google.com/?q=CLIFF+COURT+3-42-6+Kamiikebukuro+Toshima+Tokyo","今晚不寄行李（留给 10/30）。列好酒/重物装箱清单。","<span class='wishlist-tag'>准备</span>"],
+  ]},
+ {"id":"d30","date":"10/30","wd":"周五","title":"新宿：伊势丹+中古（表未填·补排）","meta":"表该日空白 · 补排新宿高价值购物。万圣节周五：傍晚前回民宿，避开涩谷/六本木。","note":"【表未填·补排】伊势丹补买（YL+NW）+ 新宿中古（推荐）。今晚寄行李到羽田 T3（浅草已改 10/29，故寄件改今晚）。池袋东口有 cosplay/池ハロ，回程走西口或板桥。","ev":[
+   ["09:30–10:00","池袋 → 新宿","https://maps.google.com/?q=Shinjuku+Station","JR/副都心线约 10 分钟。站内简餐。","<span class='wishlist-tag'>交通</span>"],
+   ["10:00–12:00","【一手】伊势丹新宿（Belty / The Row / B&O / Chanel）","https://maps.google.com/?q=Isetan+Shinjuku","本馆 1F Belty、男士馆 3F The Row、本館 5F B&O、馆内 Chanel；亦可看 LEMAIRE。补买日。","<span class='buy-tag'>待买</span><span class='yl-tag'>YL</span>The Row · <span class='nw-tag'>NW</span>Belty·B&O·Chanel 补买"],
+   ["12:10–12:50","【二手】KOMEHYO SHINJUKU","https://maps.google.com/?q=KOMEHYO+SHINJUKU+3-19-4","新宿 3-19-4。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>二手</span>"],
+   ["13:00–13:50","新宿三丁目午餐（自选）","https://maps.google.com/?q=Shinjuku+3-chome","自选；不排推荐芭菲店。","<span class='wishlist-tag'>午餐</span>"],
+   ["14:00–14:40","【二手】RAGTAG 新宿","https://maps.google.com/?q=RAGTAG+Shinjuku+3-32-10","设计师二手。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>二手</span>"],
+   ["14:50–15:20","【100 円】Seria 新宿マルイアネックス","https://maps.google.com/?q=Seria+Shinjuku+Marui+Annex","百元小物。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>Seria</span>"],
+   ["15:25–16:05","【二手】BRAND OFF / 大黑屋 新宿（择一）","https://maps.google.com/?q=BRAND+OFF+Shinjuku","累了跳过。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>二手</span>"],
+   ["16:30–17:30","回民宿方向（避开池袋东口 cosplay 高峰可走西口/板桥）","https://maps.google.com/?q=Itabashi+Station","今晚 Sunshine 有池ハロナイト，东口挤。","<span class='wishlist-tag'>提醒</span>"],
+   ["19:00–20:00","民宿附近晚餐（自选）","https://maps.google.com/?q=Kamiikebukuro","不去涩谷/六本木。","<span class='wishlist-tag'>晚餐</span>"],
+   ["20:30–21:30","【必做】寄空港宅急便 → 羽田 T3","https://maps.google.com/?q=Yamato+Transport+Kamiikebukuro","民宿附近便利店/黑猫。收件「羽田空港第3旅客ターミナル」，搭乘日 11/1。保留ご依頼主控。名牌包/珠宝随身。","<span class='yl-tag'>YL</span><span class='wishlist-tag'>必做·寄行李</span>"],
    ["21:40–22:20","【夜间】ドンキ 北池袋（可选补货）","https://maps.google.com/?q=Don+Quijote+Kita-Ikebukuro+Ikebukurohoncho+2-7-5","离民宿近，不经东口。","<span class='yl-tag'>YL</span>ドンキ 北池袋"],
   ]},
- {"id":"d01","date":"11/1","wd":"周日","title":"浅草 → 18:55 前羽田 T3","meta":"表区域：淺草→機場。退房后浅草寺/抹茶，下午往羽田；上野已在 10/30。航班 UO623 23:55。","note":"浅草排在最后一天。大行李应已于 10/31 寄达，T3 2F 领取。目标 18:55 前到 T3。","ev":[
+ {"id":"d31","date":"10/31","wd":"周六","title":"东京站地下+银座补（表未填·补排）","meta":"表该日空白 · 补排东京駅一番街 + 银座 On/Belty/买酒。万圣节周六傍晚前回民宿。","note":"【表未填·补排】Chiikawa/角色街（YL）→ 拉面街（推荐轻）→ On/Rope/Belty（NW）→ Imadeya 买酒（YL）→ 松屋 B&O（NW）。行李应已于昨夜寄出。","ev":[
+   ["09:00–09:25","池袋 → 东京站","https://maps.google.com/?q=Tokyo+Station+Yaesu+Underground+Central+Exit","丸之内线约 20 分钟，八重洲地下中央口出。","<span class='wishlist-tag'>交通</span>"],
+   ["09:30–10:00","丸之内站舍拍照 · 进一番街","https://maps.google.com/?q=Tokyo+Station+Marunouchi+Building","红砖站舍。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>散步</span>"],
+   ["10:00–10:45","【一手】东京角色街 / Chiikawa Land","https://maps.google.com/?q=Tokyo+Character+Street+Tokyo+Station","一番街 B1。地图有 Chiikawa Land Tokyo Station。","<span class='yl-tag'>YL</span>角色街 · Chiikawa"],
+   ["10:50–11:20","【零食】东京零食乐园（轻逛）","https://maps.google.com/?q=Tokyo+Okashi+Land+Tokyo+Station","限定伴手礼，不必久留。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>零食</span>"],
+   ["11:25–12:10","【午餐】东京拉面街（择一）","https://maps.google.com/?q=Tokyo+Ramen+Street+Tokyo+Station","八家拉面任选；非地图硬点，标推荐。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>午餐</span>"],
+   ["12:25–12:55","步行进银座 · On Namikikan","https://maps.google.com/?q=On+Namikikan+Ginza+4-3-1","银座 4-3-1。","<span class='nw-tag'>NW</span>On 银座"],
+   ["13:00–13:35","【一手】GIANNI CHIARINI 银座 / 松屋 3F","https://maps.google.com/?q=GIANNI+CHIARINI+Ginza+5-6-13","Belty 下单。银座店若仍翻新则松屋 3F。","<span class='buy-tag'>待买</span><span class='yl-tag'>YL</span><span class='nw-tag'>NW</span>Belty 银座/松屋"],
+   ["13:40–14:10","【休闲·NW】Rope picnic 银座インズ2","https://maps.google.com/?q=Rope+picnic+%E9%8A%80%E5%BA%A7%E3%82%A4%E3%83%B3%E3%82%BA2","インズ2 1F。","<span class='nw-tag'>NW</span>Rope picnic"],
+   ["14:15–14:45","【餐具】银座夏野（可选）","https://maps.google.com/?q=Ginza+Natsuno+6-7-4+Ginza","筷子/漆器。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>餐具</span>"],
+   ["14:50–15:40","【酒·YL】GINZA SIX B2 いまでや / 酒区","https://maps.google.com/?q=GINZA+SIX+Imadeya+Ginza","地图有 IMADEYA GINZA、HINEMOS 等。清酒/威士忌装箱前最后买。","<span class='yl-tag'>YL</span>Imadeya / 银座买酒"],
+   ["15:45–16:25","【酒+B&O】松屋银座 B1 · 7F B&O","https://maps.google.com/?q=Matsuya+Ginza","B1 酒；7F Bang & Olufsen。","<span class='yl-tag'>YL</span><span class='nw-tag'>NW</span>松屋买酒 · B&O"],
+   ["16:35–17:05","【100 円】Seria EXITMELSA 银座（可选）","https://maps.google.com/?q=Seria+EXITMELSA+Ginza","补小物。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>Seria</span>"],
+   ["17:30–18:30","回池袋 · 随身行李整理","https://maps.google.com/?q=CLIFF+COURT+3-42-6+Kamiikebukuro+Toshima+Tokyo","大件已寄。明早退房。","<span class='wishlist-tag'>准备</span>"],
+   ["20:00–21:00","民宿附近晚餐 / 早睡","https://maps.google.com/?q=Kamiikebukuro","万圣节夜：不去涩谷、六本木；池袋东口 cosplay 也尽量避。","<span class='wishlist-tag'>提醒</span>"],
+  ]},
+ {"id":"d01","date":"11/1","wd":"周日","title":"上野半天 → 18:55 前羽田 T3","meta":"表区域：上野半天去機場。退房后上野轻松半天，合羽桥仅推荐可选；18:55 前到 T3。航班 UO623 23:55。","note":"浅草已改 10/29，今日不再排浅草。合羽桥标推荐且可选。大行李应已于 10/30 寄达，T3 2F 领取。","ev":[
    ["08:00–08:45","CLIFF COURT 打包退房","https://maps.google.com/?q=CLIFF+COURT+3-42-6+Kamiikebukuro+Toshima+Tokyo","规定 10:00 前；建议 8:45 走。护照、宅急便存根、贵重物品随身。","<span class='yl-tag'>YL</span><span class='wishlist-tag'>退房</span>"],
-   ["08:45–09:30","池袋/板桥 → 浅草","https://maps.google.com/?q=Asakusa+Station","副都心线→银座线/大江户线，约 30–40 分钟。","<span class='wishlist-tag'>交通</span>"],
-   ["09:40–10:30","浅草寺 · 仲见世","https://maps.google.com/?q=Senso-ji","轻逛拍照，避开硬塞购物。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>观光</span>"],
-   ["10:40–11:20","【抹茶·NW】壽壽喜園 浅草总店","https://maps.google.com/?q=%E5%A3%BD%E5%A3%BD%E5%96%9C%E5%9C%92+%E6%B5%85%E8%8D%89","浅草寺周边抹茶。","<span class='nw-tag'>NW</span>壽壽喜園"],
-   ["11:30–12:10","【抹茶·NW】八十八良葉舍（备选/顺路）","https://maps.google.com/?q=%E5%85%AB%E5%8D%81%E5%85%AB%E8%89%AF%E8%91%89%E8%88%8E+%E6%8A%B9%E8%8C%B6","与壽壽喜園二选一或顺路。","<span class='nw-tag'>NW</span>八十八良葉舍"],
-   ["12:20–13:10","浅草午餐（自选）","https://maps.google.com/?q=Asakusa","仲见世/西参道自选，不指定推荐店。","<span class='wishlist-tag'>午餐</span>"],
-   ["13:30–14:30","浅草慢逛 / 咖啡休息（自选）","https://maps.google.com/?q=Asakusa","轻松收尾；之后往机场方向移动。","<span class='wishlist-tag'>轻松</span>"],
-   ["15:00 前出发往羽田","浅草 → 羽田 T3","https://maps.google.com/?q=Haneda+Airport+Terminal+3","都营浅草线直通京急较顺；目标 18:55 前到 T3。留充足缓冲。","<span class='wishlist-tag'>交通·必达</span>"],
+   ["08:45–09:20","板桥/池袋 → 上野","https://maps.google.com/?q=Ueno+Station","JR 约 20–25 分钟。避开池袋东口 cosplay 人流可优先板桥出发。","<span class='wishlist-tag'>交通</span>"],
+   ["09:30–11:30","上野公园 / 逛一圈（半天）","https://maps.google.com/?q=Ueno+Station","开放式半天；简餐自选。不排推荐喫茶/铜锣烧主线。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>上野半天</span>"],
+   ["（可选·时间够）","【餐具·推荐】合羽桥道具街","https://maps.google.com/?q=Kappabashi+Dougu+Street","周日部分店休；去则压缩上野，11:30 前结束并往机场方向移动。","<span class='rec-tag'>推荐</span><span class='wishlist-tag'>合羽桥可选</span>"],
+   ["12:30 前出发往羽田","上野/附近 → 羽田 T3","https://maps.google.com/?q=Haneda+Airport+Terminal+3","目标 18:55 前到 T3。可坐京滨东北→品川转京急，或都营浅草线直通京急（视所在位置）。留充足缓冲。","<span class='wishlist-tag'>交通·必达</span>"],
    ["18:40–18:55","羽田 T3 2F 黑猫柜台领行李","https://maps.google.com/?q=Haneda+Airport+Terminal+3","凭存根领取（6:00–23:00）。18:55 前到达。","<span class='yl-tag'>YL</span><span class='wishlist-tag'>领行李</span>"],
    ["19:00–20:50","T3 晚餐 · 重新装箱","https://maps.google.com/?q=Haneda+Airport+Terminal+3+Edo+Koji","4F 江户小路一带。","<span class='yl-tag'>YL</span><span class='wishlist-tag'>机场晚餐</span>"],
    ["20:55–23:30","UO623 值机 · 安检 · 免税店","https://maps.google.com/?q=Haneda+Airport+Terminal+3","柜台开放后尽早办。","<span class='wishlist-tag'>值机</span>"],
    ["23:55","羽田 T3 登机","https://maps.google.com/?q=Haneda+Airport+Terminal+3","UO623 → 11/2 04:15 HKG T1。","<span class='yl-tag'>YL</span><span class='wishlist-tag'>返程</span>"],
   ]}
-]
+];
 
 
 /* ===== v7 全日动线 ===== */
@@ -1518,13 +1529,12 @@ function prepHtml(){
    "Pocket 3（大疆 Pocket 3 摄影机、配件、存储卡及手持手柄）"
   ]],
   ["三、必做板块", [
-   "大致线路（v13 按表：10/24機場·10/25表参道+涩谷+六本木港区·10/26中目黑+代官山+惠比寿·10/27銀座·10/28新宿·10/29池袋·10/30上野·10/31缓冲寄行李·11/1浅草→羽田；事件标 YL/NW/推荐）",
+   "大致线路（v10 按表：10/24機場·10/25銀座·10/26池袋·10/27六本木港区·10/28表参道涩谷·10/29浅草·10/30新宿补·10/31东京站银座补·11/1上野→羽田；事件标 YL/NW/推荐）",
    "提前在 iPhone Apple Wallet 绑定 Suica 电子卡",
    "Google Maps 导入店铺收藏（Japan Tokyo）",
-   "⚠ 大行李建议 10/31 晚寄「空港宅急便」到羽田 T3（浅草日=11/1；最迟 10/31 发送截止前）。11/1 在 T3 2F 黑猫柜台凭存根领取。名牌包/珠宝随身。",
-   "✓ GIANNI CHIARINI 银座店已于 10/17 重开（银座5-6-13，11:00–19:00；松屋 3F 仍可用）",
-   "伞 / 薄防水外套（10/24 雨偏大；10/25–26 偶有阵雨）",
-   "10/30 若去合羽桥：周五多数道具店营业，出发当天再扫一眼关门店即可",
+   "⚠ 大行李建议 10/30 晚寄「空港宅急便」到羽田 T3（浅草日=10/29；最迟仍须 10/30 发送截止前）。11/1 在 T3 2F 黑猫柜台凭存根领取。名牌包/珠宝随身。",
+   "确认 GIANNI CHIARINI 银座店是否已重开（否则松屋 3F）",
+   "确认 11/1 若去合羽桥，周日营业店名单",
    "待补充事项..."
   ]]
  ];
@@ -1552,8 +1562,8 @@ function wishlistHtml(){
  const yl = [
   {brand:"MIKIMOTO 御木本", items:[
    {name:"银座4丁目本店 · 珍珠项链 / 耳饰",
-    days:["10/27 银座"],
-    note:"地图 Japan Tokyo + 待买。NW 表同步。",
+    days:["10/25 银座"],
+    note:"地图 Japan Tokyo + 待买。仅 YL。",
     links:[
      {href:"https://www.mikimoto.com/jp_jp/ginza-main-store", label:"银座4丁目本店（官网）"},
      {href:"https://www.mikimoto.com/jp_jp/", label:"Mikimoto JP"}
@@ -1561,8 +1571,8 @@ function wishlistHtml(){
   ]},
   {brand:"Gianni Chiarini", items:[
    {name:"Belty clutch",
-    days:["10/29 东武池袋","10/27 银座/松屋","10/28 伊势丹"],
-    note:"YL 地图 · Gianni Chiarini（非 NW）。",
+    days:["10/26 东武池袋","10/31 银座/松屋","10/30 伊势丹"],
+    note:"产品页可能 404。⚠ 银座店翻新请查官网。NW 同步。",
     links:[
      {href:"https://www.giannichiarini.com/en/bags/clutch-bags/belty-26974.html", label:"Belty 产品页"},
      {href:"https://www.giannichiarini.com/", label:"品牌官网"}
@@ -1570,106 +1580,74 @@ function wishlistHtml(){
   ]},
   {brand:"The Row", items:[
    {name:"Medium N/S Park Tote · 黑色",
-    days:["10/27 DSM","10/29 西武","10/25 六本木","10/28 伊势丹"],
-    note:"专柜优先西武·六本木·伊势丹；DSM 为买手渠道。NW 同步。",
+    days:["10/25 DSM","10/26 西武","10/27 六本木","10/30 伊势丹"],
+    note:"专柜优先西武·六本木·伊势丹；DSM 为买手渠道。仅 YL。",
     links:[{href:"https://www.therow.com/zh-jp/products/medium-n-s-park-tote-black-4", label:"Park Tote 官网"}]},
    {name:"90s Bag · fume",
     days:["同上 The Row 各站"],
-    note:"现货以门店为准。NW 同步。",
+    note:"现货以门店为准。仅 YL。",
     links:[{href:"https://www.therow.com/zh-jp/products/90s-bag-fume-ans", label:"90s Bag 官网"}]}
   ]},
   {brand:"银座杂货", items:[
    {name:"無印良品 银座（MUJI）",
-    days:["10/27 银座"],
+    days:["10/25 银座"],
     note:"银座 3-3-5 旗舰。",
     links:[
      {href:"https://shop.muji.com/jp/ginza/", label:"MUJI 银座特设"},
      {href:"https://www.muji.com/jp/ja/shop/detail/046604", label:"门店详情"}
     ]},
    {name:"银座 LOFT（及池袋/涩谷补）",
-    days:["10/27 银座","10/29 池袋","10/25 涩谷"],
+    days:["10/25 银座","10/26 池袋","10/28 涩谷"],
     note:"地图有各 Loft。",
     links:[{href:"https://www.loft.co.jp/ginzaloft/", label:"银座 Loft 官网"}]}
   ]}
  ];
 
  const nw = [
-  {brand:"MIKIMOTO", items:[
-   {name:"银座本店 · 珍珠", days:["10/27"], note:"vivianngdp 表。",
-    links:[{href:"https://www.mikimoto.com/jp_jp/ginza-main-store", label:"官网"}]}
-  ]},
-  {brand:"Gianni Chiarini / The Row / Dior", items:[
-   {name:"Belty clutch", days:["10/29","10/27","10/28"], note:"YL 地图 · Gianni Chiarini（非 NW）。",
+  {brand:"Gianni Chiarini / Dior", items:[
+   {name:"Belty clutch", days:["10/26","10/31","10/30"], note:"vivian 表。",
     links:[{href:"https://www.giannichiarini.com/", label:"官网"}]},
-   {name:"The Row Park Tote / 90s", days:["10/25","10/27–29"], note:"YL 地图收藏（非 NW）。",
-    links:[{href:"https://www.therow.com/zh-jp/", label:"The Row"}]},
-   {name:"Dior bags（银座/DSM 顺路）", days:["10/27 DSM","10/28 伊势丹备选"], note:"vivian 表，未单开专店。",
+   {name:"Dior bags（银座/DSM 顺路）", days:["10/25 DSM","10/30 伊势丹备选"], note:"vivian 表，未单开专店。",
     links:[{href:"https://maps.google.com/?q=Dior+Ginza", label:"地图"}]}
   ]},
   {brand:"表参道 / 银座 NW 店", items:[
-   {name:"agete 表参道", days:["10/25 可选"], note:"南青山 5-6-26。日程密可跳。",
+   {name:"agete 表参道", days:["10/28"], note:"南青山 5-6-26。",
     links:[{href:"https://maps.google.com/?q=agete+Omotesando", label:"地图"}]},
-   {name:"On 神宫前 + On 银座 Namikikan", days:["10/25 神宫前","10/27 银座"], note:"vivian 表。",
+   {name:"On 神宫前 + On 银座 Namikikan", days:["10/28 神宫前","10/31 银座"], note:"vivian 表。",
     links:[{href:"https://maps.google.com/?q=On+Jingumae+5-17-27", label:"神宫前"}]},
-   {name:"Rope picnic 银座インズ2", days:["10/27"], note:"vivian 表。",
+   {name:"Rope picnic 银座インズ2", days:["10/31"], note:"vivian 表。",
     links:[{href:"https://maps.google.com/?q=Rope+picnic+Ginza", label:"地图"}]},
-   {name:"B&O 表参道 / 松屋 / 伊势丹", days:["10/25","10/27","10/28"], note:"BSINT 店舗。",
+   {name:"B&O 表参道 / 松屋 / 伊势丹", days:["10/28","10/31","10/30"], note:"BSINT 店舗。",
     links:[{href:"https://bsint.jp/pages/storelist", label:"店舗一覧"}]}
   ]},
   {brand:"二次元 · 美妆香氛", items:[
-   {name:"aipri / K-BOOKS 池袋", days:["10/29"], note:"vivian 表。",
+   {name:"aipri / K-BOOKS 池袋", days:["10/26"], note:"vivian 表。",
     links:[{href:"https://maps.google.com/?q=K-BOOKS+Ikebukuro", label:"K-BOOKS"}]},
-   {name:"sheseldo / Chanel 银座", days:["10/27"], note:"vivian 表。",
+   {name:"sheseldo / Chanel 银座", days:["10/25"], note:"vivian 表。",
     links:[{href:"https://maps.google.com/?q=sheseldo+Ginza+7-8-10", label:"sheseldo"}]},
-   {name:"Le Labo 六本木 / Buly 代官山", days:["10/25 Le Labo","10/26 Buly"], note:"vivian 表 + 地图亦有多店。",
+   {name:"Le Labo 六本木 / Buly 代官山", days:["10/27 Le Labo","10/28 Buly"], note:"vivian 表 + 地图亦有多店。",
     links:[{href:"https://maps.google.com/?q=Le+Labo+Roppongi+Hills", label:"Le Labo"}]}
   ]}
  ];
 
- const foodRegions = [
-  {area:"表参道+涩谷+六本木+港区", items:[
-    {name:"neel cafe 神宫前", days:["10/25"], note:"YL 地图 specialty 咖啡。",
-     links:[{href:"https://maps.google.com/?q=neel+cafe+Jingumae", label:"地图"}]},
-    {name:"卡邦尼乌冬 神宫前", days:["10/25 午餐"], note:"NW 表。",
-     links:[{href:"https://maps.google.com/?q=%E3%82%AB%E3%83%9C%E3%83%8B%E3%82%A6%E3%83%89%E3%83%B3+%E7%A5%9E%E5%AE%AE%E5%89%8D", label:"地图"}]},
-    {name:"六本木之丘 / 港区午餐（自选）", days:["10/25"], note:"日程密，之丘内简餐即可。",
-     links:[{href:"https://maps.google.com/?q=Roppongi+Hills", label:"六本木之丘"}]}
-  ]},
-  {area:"中目黑+代官山+惠比寿", items:[
-    {name:"中目黑站前午餐（自选）", days:["10/26"], note:"河边散步后就近解决。",
-     links:[{href:"https://maps.google.com/?q=Nakameguro", label:"地图"}]},
-    {name:"ivy place 代官山", days:["10/26 备选"], note:"NW 表 · 早午餐/咖啡。",
-     links:[{href:"https://maps.google.com/?q=ivy+place+Daikanyama", label:"地图"}]}
-  ]},
-  {area:"银座", items:[
-    {name:"资生堂 PARLOUR Salon de Café", days:["10/27"], note:"YL 地图 · 季节芭菲。",
-     links:[{href:"https://maps.google.com/?q=Shiseido+Parlour+Ginza", label:"地图"}]},
-    {name:"寬烏冬 银座店", days:["10/27 午餐备选"], note:"NW 表。",
-     links:[{href:"https://maps.google.com/?q=%E5%AF%AC%E7%83%8F%E5%86%AC+%E9%8A%80%E5%BA%A7+3-14-13", label:"地图"}]}
-  ]},
-  {area:"新宿", items:[
-    {name:"新宿焼肉 牛たんの檸檬 総本店", days:["10/28 11:30 已订·2人"], note:"已订午餐；定食约 60 分钟，勿迟到。",
-     links:[
-      {href:"https://maps.google.com/?q=%E7%89%9B%E3%81%9F%E3%82%93%E3%81%AE%E6%AA%B8%E6%AA%AC+%E8%A5%BF%E6%96%B0%E5%AE%BF7-16-12", label:"地图"},
-      {href:"https://www.store-gyutan-lemon.com/", label:"官网"}
-     ]}
-  ]},
-  {area:"池袋", items:[
-    {name:"新八食堂 / Good Diner Inn Copain", days:["10/29"], note:"YL 地图吃饭点。",
-     links:[{href:"https://maps.google.com/?q=Shinpachi+Shokudo+Ikebukuro", label:"新八"}]},
-    {name:"回転寿司トリトン 东武池袋", days:["10/29 晚餐备选"], note:"NW 表。",
-     links:[{href:"https://maps.google.com/?q=%E5%9B%9E%E8%BB%A2%E5%AF%BF%E5%8F%B8%E3%83%88%E3%83%AA%E3%83%88%E3%83%B3+%E6%B1%A0%E8%A2%8B%E6%9D%B1%E6%AD%A6", label:"地图"}]}
-  ]},
-  {area:"上野+浅草", items:[
-    {name:"阿美横丁 / 上野午餐（自选）", days:["10/30"], note:"市集内解决即可。",
-     links:[{href:"https://maps.google.com/?q=Ameya-Yokocho+Ueno", label:"阿美横丁"}]},
-    {name:"壽壽喜園 浅草总店", days:["11/1"], note:"NW 表 · 抹茶。",
-     links:[{href:"https://maps.google.com/?q=%E5%A3%BD%E5%A3%BD%E5%96%9C%E5%9C%92+%E6%B5%85%E8%8D%89", label:"地图"}]},
-    {name:"八十八良葉舍（备选）", days:["11/1"], note:"NW 表 · 与壽壽喜園二选一。",
-     links:[{href:"https://maps.google.com/?q=%E5%85%AB%E5%8D%81%E5%85%AB%E8%89%AF%E8%91%89%E8%88%8E+%E6%8A%B9%E8%8C%B6", label:"地图"}]},
-    {name:"浅草午餐（自选）", days:["11/1"], note:"仲见世/西参道自选。",
-     links:[{href:"https://maps.google.com/?q=Asakusa", label:"浅草"}]}
-  ]}
+ const shared = [
+  {name:"卡邦尼乌冬 神宫前", days:["10/28 午餐"], note:"NW 表。",
+   links:[{href:"https://maps.google.com/?q=%E3%82%AB%E3%83%9C%E3%83%8B%E3%82%A6%E3%83%89%E3%83%B3+%E7%A5%9E%E5%AE%AE%E5%89%8D", label:"地图"}]},
+  {name:"寬烏冬 银座店", days:["10/25 午餐备选"], note:"NW 表。",
+   links:[{href:"https://maps.google.com/?q=%E5%AF%AC%E7%83%8F%E5%86%AC+%E9%8A%80%E5%BA%A7+3-14-13", label:"地图"}]},
+  {name:"壽壽喜園 / 八十八良葉舍 浅草", days:["10/29"], note:"NW 表。",
+   links:[{href:"https://maps.google.com/?q=%E5%A3%BD%E5%A3%BD%E5%96%9C%E5%9C%92+%E6%B5%85%E8%8D%89", label:"壽壽喜園"}]},
+  {name:"回転寿司トリトン 东武池袋", days:["10/26 晚餐备选"], note:"NW 表。",
+   links:[{href:"https://maps.google.com/?q=%E5%9B%9E%E8%BB%A2%E5%AF%BF%E5%8F%B8%E3%83%88%E3%83%AA%E3%83%88%E3%83%B3+%E6%B1%A0%E8%A2%8B%E6%9D%B1%E6%AD%A6", label:"地图"}]},
+  {name:"ivy place 代官山", days:["10/28 备选"], note:"NW 表。",
+   links:[{href:"https://maps.google.com/?q=ivy+place+Daikanyama", label:"地图"}]},
+  {name:"资生堂 PARLOUR / neel cafe", days:["10/25 Parlour","10/28 neel"], note:"YL 地图。",
+   links:[
+    {href:"https://maps.google.com/?q=Shiseido+Parlour+Ginza", label:"Parlour"},
+    {href:"https://maps.google.com/?q=neel+cafe+Jingumae", label:"neel"}
+   ]},
+  {name:"新八食堂 / Good Diner Inn Copain", days:["10/26"], note:"YL 地图吃饭点。",
+   links:[{href:"https://maps.google.com/?q=Shinpachi+Shokudo+Ikebukuro", label:"新八"}]}
  ];
 
  return `<div class="note">左 <span class="wl-who yl">YL</span> · 右 <span class="wl-who nw">NW</span>（vivianngdp 表）。日程灰标 <span class="rec-tag">推荐</span>＝助手补、非地图/表硬点。</div>
@@ -1684,11 +1662,8 @@ function wishlistHtml(){
   </div>
  </div>
  <div class="wl-shared">
-  <h3>☕🍽 吃喝（按行程区域）</h3>
-  ${foodRegions.map(r=>`
-    <div class="wl-brand">${r.area}</div>
-    ${r.items.map(itemHtml).join("")}
-  `).join("")}
+  <h3>☕🍽 吃喝（YL 地图 + NW 表为主）</h3>
+  ${shared.map(itemHtml).join("")}
  </div>`;
 }
 
